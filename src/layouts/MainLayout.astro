@@ -5,14 +5,17 @@ import '../styles/tailwind.css';
 import 'animate.css';
 const { title } = Astro.props;
 ---
-<html lang="en">
+<html lang="da">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{Astro.props.title}</title>
-		<!-- meta description mm. ind her... -->
+		<title>{Astro.props.title}4 gode steps til at sammensætte plakatvæg</title>
+
+		<meta property="og:title" content={Astro.props.title}>
+		<meta property="og:description" content="På denne side kan du få fire gode steps til at sammensætte en plakatvæg"/>
+		<meta property="og:type" content="website">
 	</head>
 	<body>
 

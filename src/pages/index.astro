@@ -8,8 +8,14 @@ import layout1 from "../assets/images/04-layout1.png";
 import layout2 from "../assets/images/04-layout2.png";
 import layout3 from "../assets/images/04-layout3.png";
 import layout4 from "../assets/images/04-layout4.png";
+const { title, description, ogtitle, ogdescription, schemamarkup } = Astro.props;
 ---
-<MainLayout title="Titel">
+
+<MainLayout 
+title="4 steps til at sammensætte plakatvæg"
+description="På denne side kan du få fire gode steps til at sammensætte en plakatvæg"
+ogtitle="4 gode steps til at sammensætte plakatvæg"
+ogdescription="På denne side kan du få fire gode steps til at sammensætte en plakatvæg">
 	<article class="grid mx-auto container gap-8 pt-8 prose">
         <h1>Fire gode steps til at sammensætte en plakatvæg</h1>
 
@@ -26,7 +32,7 @@ import layout4 from "../assets/images/04-layout4.png";
                 kigge på de omgivelser vægen er en sammenhæng med.</li>
         </ul>
 
-        <Image src={farver} alt="" />
+        <Image src={farver} alt="Plakater på en væg" />
 
         <hr>
 
@@ -46,7 +52,7 @@ import layout4 from "../assets/images/04-layout4.png";
                 hinanden.</li>
         </ul>
 
-        <Image src={motiver} alt="" />
+        <Image src={motiver} alt="Plakater med forskellige motiver" />
 
         <hr>
 
@@ -71,7 +77,7 @@ import layout4 from "../assets/images/04-layout4.png";
             <li>Vælger man at gentage det samme format kan man eks. bryde layoutet ved at tage et eller to billeder ud.
             </li>
         </ul>
-        <Image src={strl} alt="" />
+        <Image src={strl} alt="Mange plakater på en væg" />
 
         <hr>
         <h2>4) Layout af en spændende billedvæg</h2>
@@ -103,10 +109,10 @@ import layout4 from "../assets/images/04-layout4.png";
 
         <div class="grid grid-cols-2 gap-4">
 
-			<Image src={layout1} alt="" />
-            <Image src={layout2} alt="" />
-            <Image src={layout3} alt="" />
-            <Image src={layout4} alt="" />
+			<Image src={layout1} alt="Plakater placeret under en linje" />
+            <Image src={layout2} alt="Plakater placeret over en linje" />
+            <Image src={layout3} alt="Plakater placeret i et kryds" />
+            <Image src={layout4} alt="Plakater placeret abstrakt" />
 
         </div>
         <hr>
