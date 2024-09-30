@@ -8,7 +8,35 @@ import layout1 from "../assets/images/04-layout1.png";
 import layout2 from "../assets/images/04-layout2.png";
 import layout3 from "../assets/images/04-layout3.png";
 import layout4 from "../assets/images/04-layout4.png";
-const { title, description, ogtitle, ogdescription, schemamarkup } = Astro.props;
+const { title, description, ogtitle, ogdescription } = Astro.props;
+
+const schemamarkup = {
+      "@context": "https://schema.org/", 
+      "@type": "HowTo", 
+      "name": "4 steps til at sammensætte en plakatvæg",
+      "description": "Her får du 4 gode tips til hvordan du kan sammensætte en plakatvæg.",
+      "step": [{
+        "@type": "HowToStep",
+        "text": "Overvej hvilket udtryk du gerne vil udtrykke med din plakatvæg. Skal det være ren sort/hvid plakat væg? Eller en blanding af sort/hvid plakater og få plakater med farver? Det kan også være en samling af plakater i samme farvetoner eller en vild farvelade med mange farver.",
+        "image": "https://schemamarkup.netlify.app/_astro/01-farver.cOXBIyep_Z2jfXvh.webp",
+        "name": "Overvej hvordan farverne passer sammen"
+      },{
+        "@type": "HowToStep",
+        "text": "Ligesom farverne er motiverne på plakaterne også med til at skabe et bestemt udtryk. Skal de være ensartede eller skal der være kontraster når øjet ser væggen? Og kan nogle motiver være med til at skabe en overraskelse når man betragter væggen.",
+        "image": "https://schemamarkup.netlify.app/_astro/02-motiver.qWj0Ro9L_cz3ix.webp",
+        "name": "Hvilke motiver skal hænges på væggen?"
+      },{
+        "@type": "HowToStep",
+        "text": "Overvej hvilken størrelse billeder du skal bruge til din væg. Er der mange forskellige formater der skal passes ind i layoutet eller vil du have præcis de samme to formater?",
+        "image": "https://schemamarkup.netlify.app/_astro/03-strl.FWmHfCts_1j95ps.webp",
+        "name": "Motiver i forskellige størrelser og formater"
+      },{
+        "@type": "HowToStep",
+        "text": "At layoute en billedvæg med flere billeder er en svær øvelse. Er der er mange eller få billeder? Hvilke farver, hvilke motiver og hvilke størrelser skal sættes sammen som en enhed?",
+        "image": "https://schemamarkup.netlify.app/_astro/04-layout1.OrMr9QH-_Z98Cp7.webp",
+        "name": "Layout af en spændende billedvæg"
+      }]    
+    }
 ---
 
 <MainLayout 
@@ -119,3 +147,4 @@ ogdescription="På denne side kan du få fire gode steps til at sammensætte en 
 
     </article>
 </MainLayout>
+<script type="application/ld+json" set:html={JSON.stringify(schemamarkup)}/>
